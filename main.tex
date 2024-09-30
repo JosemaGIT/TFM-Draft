@@ -2,14 +2,18 @@
 
 \usepackage{fontspec}
 \usepackage[a4paper]{geometry}
+\usepackage{mathtools}
+\usepackage{amssymb}
 
 \geometry{
     left = 20mm,
     top = 20mm,
-    right = 20mm,
+    right = 40mm,
     bottom = 20mm
 }
-
+\setlength{\marginparwidth}{3.5cm}
+\setlength{\parindent}{0pt}
+\usepackage{todonotes}
 \setmainfont{Times New Roman}
 
 \title{A Brickwall Model for de Sitter Black Holes}
@@ -20,5 +24,162 @@
 \begin{document}
 
 \maketitle
+
+\section{Chapter 6 of Ads / CFT Duality User Guide}
+
+Firstly, it considers \( S^2 \), embedded within a 3-dimensional Euclidean space. To do so, it considers its metric \( ds^2 = \delta_{ij} dx^i dx^j \) and the constraint \( x^i x_i = L^2 \), which are satisfied by spherical coordinates with a fixed radius \( R \):
+
+\begin{equation}
+\begin{aligned}
+    x^1 &= L \sin{ \theta } \cos{ \phi }, \\
+    x^2 &= L \sin{ \theta } \sin{ \phi }, \\
+    x^3 &= L \cos{ \theta },
+\end{aligned}
+\end{equation}
+
+which make our metric become
+
+\begin{equation}
+    ds^2 = L^2 \left( d\theta^2 + \sin^2{ \hspace{-2pt}\theta } ~ d\phi^2 \right)
+\end{equation}
+
+This sphere is invariant to any \( SO(3) \) transformation because the sphere equation respects euclidean space \( SO(3) \) invariance (we call \(\mathbb{R}^3\) the ambient space of \( S^2 \)). This makes \( S^2 \) homogeneous, that is, any of its points can me mapped to each other by an \( SO(3) \) transformation. This manifold has a constant curvature given by its Ricci scalar \( R = \frac{2}{L^2} \)
+
+\vspace{0.5cm}
+
+We can also consider the hyperbolic space \( H^2 \), of constant negative curvature. However, this manifold cannot be embedded inside the euclidean space which makes it more difficult to imagine. On the contrary, it can be embedded into a 3-dimensional Minkowski space, that is:
+\begin{align}
+    ds^2 = & - dz^2 + dx^2 + dy^2 \\
+    -L^2 = & - z^2 + x^2 + y^2
+\end{align}
+Similarly to what we considered with \( S^2 \), the hyperbolic space is homogeneous in the sense that it is invariant under \( SO(1,2) \) transformation because of the 'ambient space' it is embedded into. (It is important to note that his space is not a hyperboloid in a three dimensional euclidean space, which would not be homogeneous in the euclidean sense).
+
+\vspace{0.5cm}
+
+Analogously to the sphere case we can define a coordinate system to express this manifold metric:
+
+\begin{equation}
+\begin{aligned}
+    x^1 &= L \sinh{ \rho } \cos{ \phi }, \\
+    x^2 &= L \sinh{ \rho } \sin{ \phi }, \\
+    x^3 &= L \cosh{ \rho },
+\end{aligned}
+\end{equation}
+
+From where we can obtain \( H^2 \) metric
+\begin{equation}
+    ds^2 = L^2 \left( d\rho^2 + \sinh^2{ \hspace{-2pt}\rho } d\phi^2 \right)
+\end{equation}
+which show us that this manifold does not have a timelike direction which makes it a space (not a space-time). The Ricci scalar of this space is: \( R = - \frac{2}{L^2} \) \textbf{(An example of an Hyperbolic space is the mass-shell condition in two dimensions)}.
+
+\vspace{0.5cm}
+
+Everything that has been considered so far were \textit{spaces} with constant curvature, so let's now consider \textit{spacetimes} with constant curvatures. For example the \( AdS_2 \) can be embedded within a spacetime with two timelike directions, \todo{Physical meaning of this spacetime?} with \( ds^2 = -dz^2 - dx^2 + dy^2\). Within this manifold we define the \( AdS^2 \) spacetime as the set of points that fulfil:
+\begin{equation}
+    -z^2 - x^2 + y^2 = -L^2
+\end{equation}
+
+Where we call L the AdS radius. This spacetime respects the SO(2,1) invariance of its ambient space. Again, a set of coordinates can be defined to express this spacetime metric:
+
+\begin{equation}
+\begin{aligned}
+    & z = L \cosh{ \rho } \cos{ \tilde{t} } \\
+    & x = L \cosh{ \rho } \sin{ \tilde{t} } \\
+    & y = L \sinh{ \rho }
+\end{aligned}
+\end{equation}
+
+which makes the \( AdS_2 \) to be of the form
+\begin{equation}
+    ds^2 = L \left( -\cosh^2{ \hspace{-2pt}\rho } d\tilde{t}^2 + d\rho^2 \right)
+\end{equation}
+
+This coordinate system is known as the global coordinates. \textbf{Note that although we embedded AdS in a flat spacetime with two timelike directions, AdS itself has only one timelike direction}
+
+\vspace{0.5cm}
+
+The \( \tilde{t} \), timelike direction, is periodic in \( 2\pi \), which brings up problems with causality. To avoid this problematic, one usually unwraps the timelike direction and considers the covering space of the AdS spacetime, where \( -\infty < \tilde{t} < +\infty \) \todo{I do not really understand this}
+
+\vspace{0.5cm}
+
+The AdS spacetime has a constant negative Ricci tensor \( R = -\frac{2}{L^2} \).
+
+Analogously, we can obtain the de Sitter space time embedded in a Minkowski space with one timelike direction so that:
+\begin{equation}
+\begin{aligned}
+    ds^2 &= -dz^2 + dx^2 + dy^2 \\
+    L^2 &= -z^2 + x^2 + y^2
+\end{aligned}
+\end{equation}
+The \( dS_2 \) spacetime is homogeneous in the sense that it is invariant under \( SO(1,2) \) transformations. And with the appropriate coordinates:
+
+\begin{equation}
+\begin{aligned}
+    & x = L \cosh{ \tilde{t} } \cos{ \theta } \\
+    & y = L \cosh{ \tilde{t} } \sin{ \theta } \\
+    & z = L \sinh{ \tilde{t} },
+\end{aligned}
+\end{equation}
+
+the metric becomes:
+
+\begin{equation}
+    ds^2 = L \left( - d\tilde{t}^2 + \cosh^2{ \hspace{-2pt}\tilde{t} }d\theta^2 \right)
+\end{equation}
+
+\textbf{(Note that in this space the timelike direction is not periodic)}.
+
+\vspace{0.5cm}
+
+The \( dS_2 \) has a possitive constant Ricci Tensor \(R = \frac{2}{L^2}\). For applications in AdS/CFT, \( AdS_5 \)\todo{Why five dimensions?} is commonly used and for the dS spacetime, one often considers the \( dS_4 \) for cosmology applications.
+
+Until now, we have used the global coordinates to discus AdS spacetime. How ever, through literature we can encounter different coordinate systems:
+
+\vspace{0.5cm}
+
+\textbf{Static Coordinates} (\( \tilde{t}, \tilde{r} \)): Useful to compare it with AdS Black Holes.
+
+\begin{equation}
+    \tilde{r} = \sinh{ \rho }
+\end{equation}
+\begin{equation}
+    \frac{ds^2}{L^2} = -(\tilde{r}^2 + 1)d\tilde{t}^2 + \frac{d\tilde{r}^2}{\tilde{r} + 1}
+\end{equation}
+
+\textbf{Conformal coordinates} (\( \tilde{t}, \theta \)):
+
+\begin{equation}
+    \tan{ \theta } = \sinh{ \rho }
+\end{equation}
+\begin{equation}
+    \frac{ds^2}{L^2} = \frac{ 1 }{ \cos^2{ \hspace{-2pt}\theta } }\left(-d\tilde{t}^2+d\theta^2\right)
+\end{equation}
+
+In this coordinate system, we encounter an spatial "boundary" at \( \theta \rightarrow \pm \pi/2 \), known as the AdS boundary which is located at \( \tilde{ r } \rightarrow +\infty \) in static coordinates and at \( r \rightarrow +\infty \) in the Poincaré coordiantes that I will define afterwards. The existence of this boundary means that one should specify the boundary condition on the AdS boundary in order to solve initial-value problemes. \todo{I do not understand why this is not trivial, as we already had to consider conditions at the infinity} "This boundary condition corresponds to specifying external sources one adds in the gauge theory side"\todo{Do not fully understand this}.
+
+\vspace{.5cm}
+
+\textbf{Poincare Coordinates} (\( t,r \)):
+
+\begin{equation}
+    \begin{aligned}
+        z &= \frac{Lr}{2}\left(-t^2 + \frac{1}{r^2} + 1 \right), \\
+        x &= Lrt, \\
+        y &= \frac{Lr}{2}\left(-t^2 + \frac{1}{r^2} - 1 \right):
+    \end{aligned}
+\end{equation}
+
+\[ r > 0 ~~~ ; ~~~ -\infty < t < +\infty \]
+
+\begin{equation}
+    \frac{ds^2}{L^2} = -r^2 dt^2 + \frac{dr^2}{r^2}
+\end{equation}
+
+This is the coordinate system most used in AdS/CFT, and also useful to compare with the AdS black hole.
+
+\subsection{Higher Dimensions}
+
+This space and spacetime we have discussed so far can be easily generalized to the higher dimensional case.
+
 
 \end{document}
