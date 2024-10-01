@@ -11,7 +11,7 @@
     right = 40mm,
     bottom = 20mm
 }
-\setlength{\marginparwidth}{3.5cm}
+\setlength{\marginparwidth}{3cm}
 \setlength{\parindent}{0pt}
 \usepackage{todonotes}
 \setmainfont{Times New Roman}
@@ -177,9 +177,147 @@ In this coordinate system, we encounter an spatial "boundary" at \( \theta \righ
 
 This is the coordinate system most used in AdS/CFT, and also useful to compare with the AdS black hole.
 
+\newpage
+
 \subsection{Higher Dimensions}
 
 This space and spacetime we have discussed so far can be easily generalized to the higher dimensional case.
 
+\vspace{.5cm}
+
+\textbf{The sphere} \( S^{p+2} \). The p+2-sphere has the SO(p+3) invariance (homogeneous with respect to \( \mathbb{R}^{p+3} \)). Additionally it is SO(p+2) invariant (SO(p+2) is a subgroup os SO(p+3)), which allow us to write the metric:
+\begin{equation}
+ds^2 = d\omega_1^2 + ... + d\omega_{p+3}^2 ~~~:~~~ \omega_1^2 + ... + \omega_{p+3} = L^2
+\end{equation}
+\begin{equation}
+    \begin{aligned}
+        ds^2 = L^2d\Omega_n^2 ~~~:~~~ d\Omega_n^2 &= d\theta_1^2 + \sin^2{ \hspace{-2pt} \theta_1} d\Omega_{n-1}^2 \\
+                                                &= d\theta_1^2 + \sin^2{ \hspace{-2pt} \theta_1} d\theta_2^2 + ... + \sin^2{ \hspace{-2pt}\theta_1 }\sin^2{ \hspace{-2pt}\theta_{n-1} } d\theta_n^2  
+    \end{aligned}
+\end{equation}
+\begin{equation*}
+    : 0 \leq \theta_i < \pi (1 \leq i \leq n-1) ~~~\&~~~ 0 \leq \theta_n < 2\pi
+\end{equation*}
+
+\textbf{The hyperbolic space} \( H^{p+2} \). The p+2-hyperboloid has the SO(1,p+2). Additionally it is SO(p+2) invariant (SO(p+2) is a subgroup os SO(1,p+2)), which allow us to write the metric, which allow us to define the metric as:
+\begin{equation}
+    ds^2 = - dx_0^2 + ... + dx_{p+2}^2 ~~~:~~~ -x_0^2 + ... + x_{p+2} = -L^2
+\end{equation}
+\begin{equation}
+    \frac{ds^2}{L^2} = d\rho^2 + \sinh^2{ \hspace{-2pt} \rho } d\Omega_{p+1}^2 : x_0 = L\cosh{ \rho } ~~~;~~~ x_i = L\sinh{ \rho } \omega_i
+\end{equation}
+\textbf{The \( AdS_{p+2} \) spacetime}. The \( AdS_{p+2} \) spacetime has the SO(2, p+1) invariance, so:
+\begin{equation}
+    ds^2 = - dx_0^2 - dx_{p+2}^2 + ... + dx_{p+1}^2 ~~~:~~~ - x_0^2 - x_{p+1}^2 + ... + x_{p+2} = -L^2
+\end{equation}
+\begin{equation}
+    ~~:~~ x_0 = L\cosh{ \rho }\cos{ \tilde{t} } ~~~;~~~ x_{p+2} = L\cosh{ \rho }\sin{ \tilde{t} } ~~~;~~~ x_i = L\sinh{ \rho } \omega_i
+\end{equation}
+which, define the global coordinates for \( AdS_{p+2} \):
+\begin{equation}
+    \frac{ds^2}{L^2} = -\cosh^2{ \hspace{-2pt}\rho} d\tilde{t}^2 + d\rho^2 + \sinh^2{ \hspace{-2pt} \rho } d\Omega_{p}^2
+\end{equation}
+Also, in static coordinates the metric takes the form:
+\begin{equation}
+    \frac{ds^2}{L^2} = -(\tilde{r}^2 + 1) d\tilde{t}^2 + \frac{d\tilde{r}^2}{\tilde{r}^2+1} + \tilde{r}^2 d\Omega_{p}^2
+\end{equation}
+And, in conformal coordinates where \( \tan\theta := \sinh\rho \)
+\begin{equation}
+    \frac{ds^2}{L^2} = \frac{1}{\cos^2{ \theta }}\left( -d\tilde{t}^2 + d\theta^2 + \sin^2\theta d\Omega_p^2 \right)
+\end{equation}
+
+And in the Poincaré coordinates,
+\begin{equation}
+    \begin{aligned}
+        x_0 &= \frac{Lr}{2}\left( y_i^2 - t^2 + \frac{1}{r^2} + 1 \right), \\
+        x_{p+2} &= Lrt, \\
+        x_i &= Lry_i ~~~ (i = 1,...,p), \\
+        x_{p+1} &= \frac{Lr}{2}\left( y_i^2 - t^2 + \frac{1}{r^2} - 1 \right),
+    \end{aligned}
+\end{equation}
+the metric becomes
+\begin{equation}
+    \frac{ds^2}{L^2} = r^2\left( -dt^2 + d\mathbf{x}_p^2 \right) + \frac{dr^2}{r^2}
+\end{equation}
+\textbf{When p=3, the metric coincides with the near-horizon limit of D3-brane}\todo{I guess I am not supposed to understand this}.
+
+\newpage
+
+\textbf{The \(dS_{p+2}\) spacetime}. The \(dS_{p+2}\) spacetime has the SO(1, p+2) invariance so:
+\begin{equation}
+    ds^2 = - dx_0^2 + ... + dx_{p+1}^2 ~~~:~~~ - x_0^2 + ... + x_{p+1} = L^2
+\end{equation}
+\begin{equation}
+    ~~:~~ x_0 = L\sinh{ \tilde{t} } ~~~;~~~ x_i = L\cosh{ \tilde{t} } \omega_i
+\end{equation}
+Then, the metric becomes
+\begin{equation}
+    \frac{ds^2}{L^2} = -d\tilde{t}^2 + \cosh^2{ \hspace{-2pt}\rho }d\Omega_p^2
+\end{equation}
+
+\textbf{Notes: The maximally symmetric spacetimes: I do not understand the groups that defines these spacetimes.}
+
+The maximally symmetric spacetime has a cosmological constant:
+\[
+    \Lambda = \pm\frac{p(p+1)}{2L^2}
+\]
+
+\section{Particle motion in AdS spacetime}
+
+\textbf{Gravitational Redshift.} A photon emmited from the origin in static coordinates and received at \(\tilde{r} = \tilde{r}_B \ll 1\) and the photon suffers a redshift:
+\begin{equation}
+    E_B \simeq \left(\frac{1}{\tilde{r}_B}\right)E_A \Longrightarrow E_B \ll E_A
+\end{equation}
+
+Then, if \( \tilde{r}_B \rightarrow \infty, E_B \rightarrow 0 \), which means that the photon gets an infinite redshift, similarly to a black hole, even though this space is not a black hole. (\( \tilde{t} = 0\) is the bottom of the gravitational well)
+
+\textbf{Photon Motion.} If we consider a photon traveling from the origin to the infinity in static coordinates we obtain that the timelike coordinate it takes him is finite, while its affine parameter is infinite.
+
+\textbf{Particle Motion.} If we consider a massive particle, we find that it cannot reach the boundary of AdS (because of the potential well) and that it takes a finite proper time to comeback to the origin. It also takes finite timelike coordinate to comeback to the origin and they are indeed, identical. 
+
+\textbf{Poincaré Coordinates and Poincaré patch}: A photon take infinite timelike coordinate in the poincare coordinate, to go from a distance \( r=R \) to \( r=0 \), but finite proper time. \textbf{This is similar to scharwarchild coordinates.}.
+
+As the photon reaches r=0 in a finite affine parameter, the Poincaré coordinates must only cover part of the full AdS called the Poincaré Patch. (If not this spacetime would be geodesically incomplete)\todo{Do not really understand this concept. And also, what should I think about this region?}
+
+\vspace{.5cm}
+
+\textbf{I do not really understand this last part of the Section in the book. I have some notes on the article of things I still have to figure out}
+
+\section{AdS/CFT interpretations}
+
+\textbf{The symmetries of the AdS spacetime} The metric of \( AdS_5 \) in Poincare coordinates:
+
+\begin{equation}
+    ds_5^2 = \left(\frac{r}{L}\right)^2(-dt^2 + dx^2 + dy^2 + dz^2) + L^2\frac{dr^2}{r^2}
+\end{equation}\todo{L on the denominator?}
+
+This spacetime is SO(2,4) invariant. This metric is invariante under the isometry group ISO(1,3) on \(x^\mu \), which corresponds to "the Poincare invariance of the dual gauge theory in four-dimensional spacetime", so \( x^\mu \) is interpreted as the coordinates of this gauge theory.
+
+\vspace{.5cm}
+
+This metric is also invariante under
+\begin{equation}
+    x^\mu \longrightarrow ax^\mu ~~~~,~~~~ r \longrightarrow \frac{1}{a}r
+\end{equation}
+
+Under \textbf{scaling}\todo{What does scaling really mean?} transforms as energy, which is conjugate to t "\textbf{This is the reason the gauge theory is four-dimensional whereas the gravitational theory is five-dimensional}". This is, the r coordinate is interpreted as the energy scale of the gauge theory.
+
+\vspace{.5cm}
+
+"\textbf{N = 4 SYM has the scale invariance, while the invariance in the dual gravitational theory is realized geometrically}"
+
+\vspace{.5cm}
+
+If we examine the duality further, the time coordinate in the gauge theory is t not the proper time \( \tau \) (Which are related by \(d\tau_r^2 = |g_{00}(r)|dt^2\) for the proper time of a \textbf{static observer})
+
+Additionally, propper energy for the observer at r, is related to the gauge theory energy, \(E_t\) by UV/IR relation:
+\begin{equation}
+    E_t=\sqrt{|g_{00}|}E(r)\simeq\left(\frac{r}{L}\right)E(r)
+\end{equation}
+The gauge theory energy will be larger if it is located nearer to the AdS boundary.
+
+\vspace{.5cm}
+
+\textbf{I do not really understand the Hawking temperature and proper temperature part}
 
 \end{document}
