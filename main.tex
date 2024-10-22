@@ -76,7 +76,7 @@ which show us that this manifold does not have a timelike direction which makes 
 
 \subsection{Spacetimes with constant curvature spaces}
 
-Everything that has been considered so far were \textit{spaces} with constant curvature, so let's now consider \textit{spacetimes} with constant curvatures. For example the \( AdS_2 \) can be embedded within a spacetime with two timelike directions, \todo{Physical meaning of this spacetime?} with \( ds^2 = -dz^2 - dx^2 + dy^2\). Within this manifold we define the \( AdS^2 \) spacetime as the set of points that fulfil:
+Everything that has been considered so far were \textit{spaces} with constant curvature, so let's now consider \textit{spacetimes} with constant curvatures. For example the \( AdS_2 \) can be embedded within a spacetime with two timelike directions, with \( ds^2 = -dz^2 - dx^2 + dy^2\). Within this manifold we define the \( AdS^2 \) spacetime as the set of points that fulfil:
 \begin{equation}
     -z^2 - x^2 + y^2 = -L^2
 \end{equation}
@@ -100,8 +100,7 @@ This coordinate system is known as the global coordinates. \textbf{Note that alt
 
 \vspace{0.5cm}
 
-The \( \tilde{t} \), timelike direction, is periodic in \( 2\pi \), which brings up problems with causality. To avoid this problematic, one usually unwraps the timelike direction and considers the covering space of the AdS spacetime, where \( -\infty < \tilde{t} < +\infty \) \todo{I do not really understand this}
-
+The \( \tilde{t} \), timelike direction, is periodic in \( 2\pi \), which brings up problems with causality. To avoid this problematic, one usually unwraps the timelike direction and considers the covering space of the AdS spacetime, where \( -\infty < \tilde{t} < +\infty \) 
 \vspace{0.5cm}
 
 The AdS spacetime has a constant negative Ricci tensor \( R = -\frac{2}{L^2} \).
@@ -133,7 +132,7 @@ the metric becomes:
 
 \vspace{0.5cm}
 
-The \( dS_2 \) has a possitive constant Ricci Tensor \(R = \frac{2}{L^2}\). For applications in AdS/CFT, \( AdS_5 \)\todo{Why five dimensions?} is commonly used and for the dS spacetime, one often considers the \( dS_4 \) for cosmology applications.
+The \( dS_2 \) has a possitive constant Ricci Tensor \(R = \frac{2}{L^2}\). For applications in AdS/CFT, \( AdS_5 \) is commonly used and for the dS spacetime, one often considers the \( dS_4 \) for cosmology applications.
 
 \subsection{Various coordiante systems of AdS spacetime}
 
@@ -159,7 +158,7 @@ Until now, we have used the global coordinates to discus AdS spacetime. How ever
     \frac{ds^2}{L^2} = \frac{ 1 }{ \cos^2{ \hspace{-2pt}\theta } }\left(-d\tilde{t}^2+d\theta^2\right)
 \end{equation}
 
-In this coordinate system, we encounter an spatial "boundary" at \( \theta \rightarrow \pm \pi/2 \), known as the AdS boundary which is located at \( \tilde{ r } \rightarrow +\infty \) in static coordinates and at \( r \rightarrow +\infty \) in the Poincaré coordiantes that I will define afterwards. The existence of this boundary means that one should specify the boundary condition on the AdS boundary in order to solve initial-value problemes. \todo{I do not understand why this is not trivial, as we already had to consider conditions at the infinity} "This boundary condition corresponds to specifying external sources one adds in the gauge theory side"\todo{Do not fully understand this}.
+In this coordinate system, we encounter an spatial "boundary" at \( \theta \rightarrow \pm \pi/2 \), known as the AdS boundary which is located at \( \tilde{ r } \rightarrow +\infty \) in static coordinates and at \( r \rightarrow +\infty \) in the Poincaré coordiantes that I will define afterwards. The existence of this boundary means that one should specify the boundary condition on the AdS boundary in order to solve initial-value problemes. "This boundary condition corresponds to specifying external sources one adds in the gauge theory side"\todo{Do not fully understand this}.
 
 \vspace{.5cm}
 
@@ -266,7 +265,7 @@ The maximally symmetric spacetime has a cosmological constant:
     \Lambda = \pm\frac{p(p+1)}{2L^2}
 \]
 
-\section{Particle motion in AdS spacetime}
+\subsection{Particle motion in AdS spacetime}
 
 \textbf{Gravitational Redshift.} A photon emmited from the origin in static coordinates and received at \(\tilde{r} = \tilde{r}_B \ll 1\) and the photon suffers a redshift:
 \begin{equation}
@@ -281,19 +280,19 @@ Then, if \( \tilde{r}_B \rightarrow \infty, E_B \rightarrow 0 \), which means th
 
 \textbf{Poincaré Coordinates and Poincaré patch}: A photon take infinite timelike coordinate in the poincare coordinate, to go from a distance \( r=R \) to \( r=0 \), but finite proper time. \textbf{This is similar to scharwarchild coordinates.}.
 
-As the photon reaches r=0 in a finite affine parameter, the Poincaré coordinates must only cover part of the full AdS called the Poincaré Patch. (If not this spacetime would be geodesically incomplete)\todo{Do not really understand this concept. And also, what should I think about this region?}
+As the photon reaches r=0 in a finite affine parameter, the Poincaré coordinates must only cover part of the full AdS called the Poincaré Patch. (If not this spacetime would be geodesically incomplete)
 
 \vspace{.5cm}
 
 \textbf{I do not really understand this last part of the Section in the book. I have some notes on the article of things I still have to figure out}
 
-\section{AdS/CFT interpretations}
+\subsection{AdS/CFT interpretations}
 
 \textbf{The symmetries of the AdS spacetime} The metric of \( AdS_5 \) in Poincare coordinates:
 
 \begin{equation}
     ds_5^2 = \left(\frac{r}{L}\right)^2(-dt^2 + dx^2 + dy^2 + dz^2) + L^2\frac{dr^2}{r^2}
-\end{equation}\todo{L on the denominator?}
+\end{equation}
 
 This spacetime is SO(2,4) invariant. This metric is invariante under the isometry group ISO(1,3) on \(x^\mu \), which corresponds to "the Poincare invariance of the dual gauge theory in four-dimensional spacetime", so \( x^\mu \) is interpreted as the coordinates of this gauge theory.
 
@@ -304,7 +303,7 @@ This metric is also invariante under
     x^\mu \longrightarrow ax^\mu ~~~~,~~~~ r \longrightarrow \frac{1}{a}r
 \end{equation}
 
-Under \textbf{scaling}\todo{What does scaling really mean?} transforms as energy, which is conjugate to t "\textbf{This is the reason the gauge theory is four-dimensional whereas the gravitational theory is five-dimensional}". This is, the r coordinate is interpreted as the energy scale of the gauge theory.
+Under \textbf{scaling} transforms as energy, which is conjugate to t "\textbf{This is the reason the gauge theory is 4-dimensional whereas the gravitational theory is 5-dimensional}". This is, the r coordinate is interpreted as the energy scale of the gauge theory.
 
 \vspace{.5cm}
 
@@ -324,4 +323,140 @@ The gauge theory energy will be larger if it is located nearer to the AdS bounda
 
 \textbf{I do not really understand the Hawking temperature and proper temperature part}
 
+\vspace{.25cm}
+
+\textbf{Then, to understand this part I will study Chapter 3 of the book to learn about Black Hole thermodynamics}
+
+\section{Chapter 3 of Ads/CFT Duality User Guide}
+
+This Chapter explains the relation between black holes and thermodynamics \textbf{using the Schwarzschild black hole as an example}.
+
+\vspace{.25cm}
+
+Classically as nothing can come out of a Black Hole. Also, the radius of it events horizon is proportional to its mass $r_0 = 2GM/c^2$. This makes its area a non-decreasing quantity, which reminds of a thermodynamic entropy\footnote{Hawking Radiation makes the Black Hole a non-isolated system and then the Area decreases until it evaporates, but the sum of the rest of the universe and the Black Hole entropy never decreases}.
+
+\vspace{.25cm}
+
+This can point into the direction that a Black Holes entropy $S$ is proportional to their area $A$. In fact, Black Holes must obey not only second law but all thermodynamic like laws.
+
+\vspace{.25cm}
+
+A stationary Black Hole has only a three parameters such as the mass, angular momentum, and charge (\textbf{No-hair theorem})\todo{Revise the references in the Chapter}. That is, black holes does not depend on properties of the original star such as its shape or composition. On the other hand, Black Holes are constrained only few initial conditions. It does not matter the different many subtleties of its formation, the only three things that differ a Black Hole from another as I said before, its mass, its angular momenta and its charge.
+
+This is pretty similar to thermodynamics. Although thermodynamics is the theory of macroscopic system with lots of different atoms and molecules with infinitely many degrees of freedom, it only requires a couple of properties to describe the system as temperature and pressure. This process of going from microscopic variables to macroscopic variables is known as the coarse-graining.
+
+This seams to point at Black Holes description being coarse-grained. However, to this day the different details of this coarse-graining is not clear, as we have not been able to establish a microscopic or quantum theory of Black Holes.
+
+\subsection{Zeroth Law}
+
+An \textbf{isolated} thermodynamic system eventually reaches a thermal equilibrium. That is, temperature becomes constant everywhere in the system. Following \textbf{no-hair theorem}, this also happens with gravity over the events horizon in Black Hole, even Black Holes which have arisen from an asymmetric star, becomes symmetric once they reach equilibrium, which implies that gravity over the horizon is constant.
+
+\vspace{.25cm}
+
+In Newtonian gravity, we can obtain that the surface gravity (the gravitational force per unit mass on the events horizon) is:
+\[
+    \kappa = \left.\frac{GM}{r}\right|_{r=r_0} = \frac{c^4}{4GM}
+\]
+However, as I have mentioned, we have obtained result using Newtonian Gravity, so we should not take this argument too seriously. Although surface gravity is the force necessary to stay at the horizon, in General Relativity this concept makes no sense until we specify who measures it. (Two observers will disagree the values of an acceleration due to gravitational redshift). An infalling observer cannot escape the horizon, no matter how large the force is. The force will diverge for him. However, if this force is measured by the asymptotic observer\todo{Definition?}, the force remains finite and coincides with the Newtonian result.
+
+\subsubsection{Surface Gravity}
+
+If we consider the Schwarzschild Black Hole, the particle motion is determined by:
+\[
+    a^r = \frac{d^2r}{d\tau^2} = -\frac{GM}{r^2}
+\]
+as in Newtonian Gravity. However this quantity is not covariant. To obtain a covariant quantity, we'll use the proper acceleration, which is the magnitude of the 4-acceleration\todo{Prove that $a^0$ of a particle at rest is actually 0}:
+\[
+    a := \sqrt{g_{\mu\nu}a^\mu a^\nu} = \frac{-GM}{r^2\sqrt{1-2GM/r}}
+\]
+Which diverges at $r_0$. This is not surprising since the particle cannot escape from the horizon. Let's now consider an asymptotic observer at $r=\infty$ where he is not affected by the Black Hole (Schwarzschild Black Holes are asymptotically flat). We will consider the force per unit mass this observer would need to exert on the particle on the horizon (Imagine that he is pulling a string that holds the particle in place) to prevent it from falling in the Black Hole.
+
+\vspace{.25cm}
+
+If this observer pulls the string by the proper distance $\delta s$ \todo{What is proper distance? Wouldn't this distance change from one point to another? I guess that it could be in infinitely short time?} and translate the work done to radiated energy we can calculate that the surface gravity (acceleration measured by the asymptotic observer) coincides with the Newtonian Result.
+
+\subsubsection{First Law}
+
+The increase of the mass of a black hole, increases the horizon area:
+\[
+    dM \propto dA
+\]
+Considering that in General Relativity mass appears only in the compination $GM$ then left hand side of this equation must be $GdM$. Considering now that we said that the area could play the part of entropy within black holes and surface gravity the part of temperature, we can make an analogy with the first law $dE = TdS$ and reach to the conclusion:
+\[
+    GdM \approx \kappa dA
+\]
+Indeed if we differentiate the expression of the area of a black hole horizon with respect to $M$ one can see that:
+\[
+    GdM = \frac{\kappa}{8\pi}dA
+\]
+which we'll call the first law of black holes.
+
+\subsection{From analogy to real thermodynamics}
+\subsubsection{Hawking Radiation}
+
+Although we have found black hole laws similar to thermodynamic laws, this is just an analogy. That they these expression are the same does not imply that they represent the same physics. Indeed one may find several problems when trying to identify black hole laws with thermodynamic laws:
+
+\begin{enumerate}
+    \item Nothing comes out of black holes. If black holes were to have any notion temperature it should have thermal radiation.
+    \item The horizon area and entropy behave similarly, but they have different dimensions. A way to obtain entropy dimensions from area would be to divide it by a length squared scale factor (In $k_b =1$ units). However we have not encountered an appropriate one.
+\end{enumerate}
+
+Black holes are not isolated objects in our universe. Indeed, matter can make black holes, and matter obeys quantum mechanics microscopically. If we consider quantum effects of matter, black holes must indeed emit black body radiation with a temperature:
+\[
+    k_BT = \frac{\hslash\kappa}{2\pi c} = \frac{\hslash c^3}{8\pi GM}\text{      Schwarzschild Black Hole}
+\]
+\todo{How is this temperature derived}
+
+If we now rewrite the first law of thermodynamics we can obtain:
+\[
+    d(Mc^2) = T\frac{k_Bc^3}{4G\hslash}dA
+\]\todo{Is this really the energy of the Black Hole?}
+
+Which comparing with $dE = TdS$, one obtains:
+\[
+    S = \frac{1}{4}\frac{A}{l_{pl}^2}k_B
+\]
+Where we have defined the Planck Length as $l_{pl} = \sqrt{G\hslash/c^3}\approx 10^{-35}m$, which is the scale where quantum gravity becomes important\todo{Why?}. This equation is known as the \textit{Area law}.
+
+\vspace{.25cm}
+
+As a disclaimer, I must point out that we have not "derived" $S$ as the real entropy, the microsopic measurement of degrees of freedom of a system. Indeed, we do not even know how a black hole works microscopically. We are just assuming that black hole laws represent the same thermodynamic laws.
+
+\vspace{.25cm}
+
+Moreover, even though black holes entropy seems to be proportional to the "area", statistical entropy is normally proportional to the "volume" of a system. \textbf{This difference is extremely important for AdS/CFT and gives a clue on the nature of microscopic states of black holes.} Because these entropies behave differently, a four-dimensional black hole cannot correspond to a four-dimensional statistical system. However, a five-dimensional "area" is a four-dimensional "volume", which means that a five-dimensional black hole can correspond to a four-dimensional statistical system.
+
+\vspace{.25cm}
+
+Then this is a first clue to AdS/CFT: \textbf{The black hole entropy suggests that a black hole can be described by the usual statistical system whose spatial dimension is one dimension lower than the gravitational theory}\todo{However, does this coarse-grained theory allow to constrain this "microscopic" theory properly?}
+
+\vspace{.25cm}
+
+AdS/CFT claims that this statistical system is a gauge theory. Such an idea is called the \textit{holographic principle}. 
+
+\vspace{.25cm}
+
+\textbf{Note: Even though this "\textit{derivation}" of the Entropy was made using Schwarzschild Black Hole, this is just an example. As long as the gravitational action is written by the Einstein-Hilbert action\footnote{For a general gravitational action, Wald formula gives the black hole entropy} this formula will hold for any type of black hole not only in general relativity but in any other gravitational theory even string theory} 
+
+\textbf{There's a subsection which talks about the derivation of Hawkings temperature}
+
+\subsubsection{On the origin of Black Hole Entropy}
+
+It is difficult to answer the question of, "\textit{What does this black hole entropy represents?}". There are different semi-classical approaches to an answer, and string theory itself can derive black hole entropy microscopically for some black holes. However, this semi-classical approaches are not really satisfactory. AdS/CFT gives an interesting interpretation to this semi-classical result the partition function of this systems are the partition function of a gauge theory. AdS/CFT claims the equivalence between two theories, a guge theory and a gravitational theory, and there are two points of view one can take:
+\begin{enumerate}
+    \item Use the gravitational theory to know about the gauge theory.
+    \item Conversely use the gauge theory to know about the gravitational theory.
+\end{enumerate}
+
+If we choose to follow the latter black hole entropy is nothing but the usual statistical entropy. However this holographic interpretation in AdS/CFT works with black holes in AdS spacetime. It is not clear if one can make such an interpretation for any other black hole.
+
+\todo{The rest of the chapter talks about different Black Holes different from the Schwarzschild, I will revisit it later on}
+
+\subsection{Summary}
+\begin{enumerate}
+    \item Black Holes behaves like thermodynamic systems and has thermodynamic quantities such as energy (mass), entropy, and temperature.
+    \item Black hole entropy is proportional to the horizon area, which suggests that it can be described by an usual statistical system whose spatial dimension is one dimension lower than the gravitational theory (holographic principle).
+\end{enumerate}
+
+\textbf{Note: This chapter has an appendix. The most important thing to get from it is the fact that in Black Holes with compact horizons, Euler and Gibbs-Duhem relations do not work, as these black Holes does not satisfy fundamental postulates of Thermodynamics}
 \end{document}
