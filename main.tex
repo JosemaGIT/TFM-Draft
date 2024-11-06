@@ -459,4 +459,215 @@ If we choose to follow the latter black hole entropy is nothing but the usual st
 \end{enumerate}
 
 \textbf{Note: This chapter has an appendix. The most important thing to get from it is the fact that in Black Holes with compact horizons, Euler and Gibbs-Duhem relations do not work, as these black Holes does not satisfy fundamental postulates of Thermodynamics}
+
+\section{Chapter 7 of Ads / CFT Duality User Guide}
+
+To obtain thermodynamic quantities of the strongly-coupled $N=4$ super-Yang-Mills theory, (\textbf{relativistic conformally invariant Lagrangian gauge theory}) we can use the AdS black hole as its holographic dual.
+
+\subsection{The AdS black hole}
+
+Black holes can exist in the AdS spacetime. The simplest AdS black hole is known as the Schawarzschild-AdS black hole, which can have an spherical (then compact) horizon or more interestingly AdS black holes with planar horizon (\textbf{or AdS black branes for the time being}), which are the ones we are going to consider.
+
+\vspace{.25cm}
+
+Like the $AdS_5$ spacetime, the $SAdS_5$ black hole is a solution of the Einstein equation with a negative cosmological constant, which has the following metric:
+\[
+    ds_5^2 = -\left(\frac{r}{L}\right)^2 \left[1-\left(\frac{r_0}{r}\right)^4\right]dt^2 + \frac{dr^2}{-\left(\frac{r}{L}\right)^2 \left[1-\left(\frac{r_0}{r}\right)^4\right]} + \left(\frac{r}{L}\right)^2(dx^2+dy^2+dz^2)
+\]
+, which as in the usual Schwarzchild black hole has a horizon in $r=r_0$. It is interesting to note that if we tend $r_0$ to 0 we obtain the $AdS_5$ metric in Poincaré coordinates. 
+
+\vspace{.25cm}
+
+In this metric the $(x,y,z)$ coordinates represent $\mathbb{R}^3$. In the usual Schwarzschild black hole, this term was $r^2d\Omega$ which would give us a spherical compact horizon at $r=r_0$. Here, however, the horizon extends to infinity in any of this three directions.
+
+\vspace{.25cm}
+
+While $AdS_5$ had a constant curvature given by the cosmological constant, $SAdS_5$ black hole do not. Most notably it has a physical curvature singularity at $r=0$. 
+
+As we previously proved, the $AdS$ space time is invariant under the scaling $x^\mu\rightarrow ax^\mu~~;~~r\longrightarrow r/a$. Under this scaling, the black hole metric becomes:
+\[
+     ds_5^2 \rightarrow -\left(\frac{r}{L}\right)^2 \left[1-\left(\frac{ar_0}{r}\right)^4\right]dt^2 + \frac{dr^2}{-\left(\frac{r}{L}\right)^2 \left[1-\left(\frac{ar_0}{r}\right)^4\right]} + \left(\frac{r}{L}\right)^2(dx^2+dy^2+dz^2)
+\]
+Which scale the horizon radius, which means that black holes with different horizon radii are all equivalent.\todo{What do we mean by equivalent?}
+
+\vspace{.25cm}
+
+Conversely, as we will see the black hole temperature, $T\propto r_0$, so one can change the temperature by the scaling, which means that all temperatures are equivalent (except for $T=0$), which tells us that there is characteristic temperature in this system which discard things like phase transitions.
+
+\vspace{.25cm}
+If we look at it from the gauge theory point of view, this is a consequence of $N=4 SYM$ being scale invariant and not having any dimensionful quantity except the temperature.\todo{I do not understand why this is the case}
+
+\subsection{Thermodynamic quantities of the AdS black hole}
+
+\subsubsection{Thermodynamic quantities}
+
+In $AdS/CFT$ the thermodynamic quantities of the $SAdS_5$ black hole are interpreted as the thermodynamic quantities of its dual $N=4 SYM$ gauge theory at strong coupling. To rewrite the results of the black hole in the Gauge theory sense, we need the relations between the parameters of both theories:
+\[
+    N_c^2 = \frac{\pi L^3}{2G_5} ~~,~~ \lambda = \left(\frac{L}{l_s}\right)^4
+\]
+
+where, $l_s$ is the string lenght, $G_5$ is the newton constant in 5 dimensions, $N_c$ correspond to the dimension of the group of the $U(N_c) gauge theory$, L is the $AdS_5$ radius and $\lambda$ is the Hooft coupling.\todo{I do not fully understand this parameters} So the left hand side of these relations are gauge-theory parameters and the right hand side are gravity parameters. 
+
+\vspace{.25cm}
+
+First considering what we obtained in the previous chapter the temperature of this blakc hole is given by:
+\[
+    T=\frac{r_0}{\pi L^2}
+\]
+
+This black hole has an horizon of infinite extension, which means that the entropy will diverge, so we are going to consider the entropy density $s$. To do so, let's apply an infrared cutoff considering $0\leq x,y,z\leq L_x,L_y,L_z$. The gauge theory coordinates are these $(x,y,z)$, so the gauge theory volume is given by $V_3 = L_x L_y L_z$. Which is not the same as the horizon $hyper-area$ as the horizon lives in a curved space-time. This way, considering the are law of entropy:
+\[
+    S=\frac{A}{4G_5} = \frac{1}{4G_5}\left(\frac{r_0}{L}\right)^3 V_3 \Rightarrow s = \frac{S}{V_3} = \frac{1}{4G_5}\left(\frac{r_0}{L}\right)^3 = \frac{a}{4G_5}
+\]
+where, we define $a=A/V_3$ as the "horizon area density". Using the temperature we have calculated and the relations of $AdS/CFT$ we get that in the gauge theory sense:
+\[
+    s=\frac{\pi}{2}N_C^2 T^3
+\]
+
+The rest of the thermodynamic quantities can be obtained from thermodynamics relations:
+\[
+    d\varepsilon = TdS \Rightarrow \varepsilon = \frac{3}{8} \pi^2 N_c^2T^4
+\]
+\[
+    \varepsilon = Ts - P \Rightarrow P = \frac{1}{8} \pi^2 N_c^2T^4 = \frac{\varepsilon}{3}
+\]
+
+\textbf{Temperature dependence}: As we can see $\varepsilon\propto T^4$ represents \textit{Stefan-Boltzmann law}, a consequence of $N=4 SYM$ being scale invariant and not having any dimensionful quantity except the temperature. What is not trivial is the proportionality constant. \textbf{We will compare this constant with the free gas case}
+
+\vspace{.25cm}
+
+On the other hand, if we think about it from the black hole point of view, it's a surprise that a black hole obeys Stefa-boltzmann law. Indeed, the usual Schwarzschild black hole has a relation $M\propto T^{-2}$, so the black hole takes a completely different form from the Stefan-Boltzmann form. Additionally, it is known that Schwarzschild black hole have negative heat capacity $C=dM/dT<0$, which does not allow for a stable equilibrium. That is: First, the black hole emits radiation and consequently it loses mass, which raises the temperature which incrases the rate at which it emits radiation, and raising the temperature of the black-hole indefinitely, making attaining an equilibrium impossible.
+
+\vspace{.25cm}
+
+This absences of stable equilibrium is not only true for Schwarzschild black holes, but for any gravitational system in general. That is: once a gravitational system deviates from the equilibrium the fluctuations do not decay but grow in time, a consequence of gravity being a long-range force. Indeed, this is the reason why our universe is not uniform.
+
+\vspace{.25cm}
+
+Thus, considering all of this AdS black hole is very special in this sense, other types of usual black holes would not be able to descrive a gauge theory.
+
+Also note that the entropy is proportional to the $hyper-area$ of the black hole which is a three dimensional space which allow us to interpret it as the entropy of the $3+1$-dimensional gauge theory living in this horizon.
+
+\vspace{.25cm}
+
+\textbf{The $N_c^2$ dependence}: The entropy density is $s\propto N_c^2$, which implies that the dual gauge theory is in the unconfined plasma phase. If it were in the confined phase, only the $SU(N_c)$ singlets contribute to the entropy and it would not be proportional to $N_c^2$.\todo{I do not understand this part}
+
+\vspace{.25cm}
+
+\textbf{Traceless energy-momentum tensor:} We have obtained $\varepsilon=3P$ which tells us that $T^\mu_\mu = 0$, which also comes from the scale-invariance of the $N=4 SYM$ theory. As the temperature is the only dimensionful quantity, the dimensional analysis and thermodynamic relations immediately imply that the energy-momemtum tensor must be traceless.
+
+\textbf{Comparison with free gas result:} To compare it with the $AdS/CFT$ result, lets compare the entropy density obtained with the free gas result. The free gas result is given by:
+\[
+    s_{free} = N_{dof}\frac{2\pi^2 T^3}{45}
+\]
+Where $N_{dof}$ is the number of degrees of freedom of the theory. Considering the 6 adjoint scalars, and the gauge field for the bosonic part and considering that fermions must have the same degrees of freedom from supersymmetry, then: $N_{dof} = 15(N_c^2-1)$, which gives us:
+\[
+    s_{free}= 15(N_c^2-1) \frac{2\pi^2 T^3}{45} \approx 2\pi^2N_c^2 T^3
+\]
+, where we have considered the large-$N_c$ limit in the last equation. This gives us that:
+\[
+    S_{BH} = \frac{3}{4} s_{free}
+\]
+
+This tells us that this theory predicts a $3/4$ discrepancy between the free gas theory and the strongly coupled case. This result has not been contrasted empirically yet, because of the technical limitations. However, similar behavior is obtained in lattice simulations.
+
+\subsection{The AdS black hole with spherical horizon}
+
+The AdS black hole with spherical horizon is given by
+\[
+    ds_5^2 = -\left(\frac{r^2}{L^2}+1-\frac{r_0^4}{L^2r^2}\right)dt^2+\frac{dr^2}{\frac{r^2}{L^2}+1-\frac{r_0^4}{L^2r^2}}+r^2 d\Omega_3^2
+\]
+
+This metric reduces to $AdS_5$ in static coordinates if we tend $r_0\longrightarrow 0$. The horizon is located at $r=r_+$ such that:
+\[
+    r_0^4 = r_+^4 + L^2r_+^2
+\]
+
+It is obvious to see that that black holes with different horizon radii are inequivalent. Indeed if we consider the large black-hole limit, it corresponds to the planar horizon, we already studied. To see this lets consider the scale transformation $t\rightarrow at$ and $r\rightarrow r/a$ and take the $a\rightarrow 0$ limit, but maintaining the horizon fixed under the scale transformation so we need to also transform $r_+\rightarrow r_+/a$, then:
+\[
+    ds_5^2 = -\left(\frac{r^2}{L^2}+a^2-\frac{r_0^4}{L^2r^2}\right)dt^2+\frac{dr^2}{\frac{r^2}{L^2}+a^2-\frac{r_0^4}{L^2r^2}}+\frac{r^2}{a^2} d\Omega_3^2
+\]
+, which obviously does not reduce to the original metric. However, we can see that the radius of the $S^3$ horizon grows with $\frac{r^2}{a^2}$. If we consider the $a\rightarrow 0$ limit, this grows to infinity becoming flat and it can be approximated with $(r/a)^2\approx (r/L)^2d\mathbf{x}_3^2$, resulting in the planar geometry we already discussed. 
+
+\vspace{.25cm}
+
+Different horizon radii are inequivalent, which means that not all temperatures are equivalent. This may lead to theories that involve interesting proceses as phase transitions. This is obviously a consequence of this horizon being compact which means that the gauge theory would live in a compact space.
+
+\subsection{Summary}
+
+In $AdS_5$, it exists a black hole with planar horizon, which is dual to a $N=4SYM$ gauge theory.
+
+\vspace{.25cm}
+
+This kind of black-hole obey the Stefan-Boltzman law something not trivial among gravitational systems.
+
+\vspace{.25cm}
+
+The entropy of a $4+1$-dimensional black hole is interpreted in the $AdS/CFT$ sense as a $3+1$-dimensional entropy of the gauge theory living in the horizon, thanks to the area law.
+
+\vspace{.25cm}
+
+The entropy of the $SAdS_5$ black hole is $3/4$ of the entropy of the free gas limit of the $N=4SYM$ theory, which implies a prediction of the $N=4SYM$ entropy at strong coupling becoming $3/4$ of the free gas entropy.
+
+\subsection{Appendix}
+
+To evaluate the semiclassical partition function for the $SAdS_5$ black hole, one needs to obtain first its on-shell action. That is, the action evaluated at the solution of the problem. Todo so, one has to consider the following three terms of the action:
+\[
+    S_E = S_{bulk} + S_{GH} + S_{CT}
+\]
+
+The first term is just the Einstein-Hilbert action:
+\[
+    S_{bulk} = -\frac{1}{16\pi G_5}\int d^5 x \sqrt{g}(R-2\Lambda)
+\]
+which evaluated on-shell gives us:
+\[
+    S_{bulk} = \frac{\beta V_3}{16\pi G_5}\frac{r_0^4}{L^5}\left.\left(\frac{1}{u^4}-1\right)\right|_{u=0}
+\]
+
+The second term is the Gibbons-hawking action, a surface term that does not contribute to the equation of motion but that is necessary to add, to account for the extrinsic of our space time, that is the curvature only manifest when considering our space-time embedded within a higher-dimensional one. It has the following form:
+\[
+    S_{GH} = -\frac{2}{16\pi G_5}\int d^4 x\sqrt{det(g_{ii})}K
+\]
+and, its value on-shell is given by:
+\[
+    S_{GH} = -\frac{\beta V_3}{16\pi G_5}\frac{r_0^4}{L^5}\left.\left(\frac{8}{u^4}-4\right)\right|_{u=0}
+\]
+As it can be seen, these two terms diverges at $u\rightarrow 0$. To cancel these divergences, we must add the last term, the counterterm action. 
+
+\vspace{.25cm}
+
+From the AdS/CFT point of view, this divergence is interpreted as the ultraviolet divergence of the dual field theory. In the gauge theory it is obvious how to handle this divergence, one has to carry the renormalization and add counterterms in the action. Then, we can do the same in the dual gravitational theory. This procedure is known as the holographic renormalization. In the case of the $SAdS_5$ black hole this term has the following form:
+\[
+    S_{CT} = \frac{10}{16\pi LG_5}\int d^4 x\sqrt{det(g_{ii})}
+\]
+, which evaluated on shell give us:
+\[
+    S_{GH} = \frac{\beta V_3}{16\pi G_5}\frac{r_0^4}{L^5}\left.\left(\frac{6}{u^4}-3\right)\right|_{u=0}
+\]
+
+If, we now consider the sum of these three terms we obtain that:
+\[
+    S_E = -\frac{\beta V_3}{16\pi G_5}\frac{r_0^4}{L^5}
+\]
+
+If we now consider the semiclassical relations of this quantity to the partition function:
+\[
+    Z = e^{-S_E} \Longrightarrow S_E=\beta F
+\]
+So that, the free energy becomes:
+\[
+    F = -\frac{V_3}{16\pi G_5}\frac{r_0^4}{L^5} = -\frac{1}{8}\pi^2N_c^2 T^4V_3
+\]
+, which allow to obtain the thermodynamic quantities which coincide with what we already calculated:
+\[
+    s= -\frac{1}{V_3}\partial_T F = \frac{1}{2}\pi^2 N_c^2 T^3
+\]
+\[
+    P = -\partial_{V_3} F = \frac{1}{8}\pi^2 N_c^2 T^4
+\]
+\[
+    P = \frac{F}{V_3} +Ts = \frac{3}{8}\pi^2 N_c^2 T^4
+\]
+
 \end{document}
