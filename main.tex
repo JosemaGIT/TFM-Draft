@@ -556,7 +556,7 @@ Also note that the entropy is proportional to the $hyper-area$ of the black hole
 
 \textbf{Traceless energy-momentum tensor:} We have obtained $\varepsilon=3P$ which tells us that $T^\mu_\mu = 0$, which also comes from the scale-invariance of the $N=4 SYM$ theory. As the temperature is the only dimensionful quantity, the dimensional analysis and thermodynamic relations immediately imply that the energy-momemtum tensor must be traceless.
 
-\textbf{Comparison with free gas result:} To compare it with the $AdS/CFT$ result, lets compare the entropy density obtained with the free gas result. The free gas result is given by:
+\textbf{Comparison with free gas result:} To compare it with the $AdS/CFT$ result, lets compute the entropy density obtained with the free gas result. The free gas result is given by:
 \[
     s_{free} = N_{dof}\frac{2\pi^2 T^3}{45}
 \]
@@ -669,5 +669,83 @@ So that, the free energy becomes:
 \[
     P = \frac{F}{V_3} +Ts = \frac{3}{8}\pi^2 N_c^2 T^4
 \]
+
+\section{AdS/CFT - non-equilibrium}
+
+Until now, we've learnt that AdS/CFT claims the equivalence
+\[
+    Z_{gauge} = Z_{AdS}
+\]
+In nonequilibrium situations, one can use the following relation (GKP-Witten relation)
+\[
+    \left\langle\exp\left(i\int \phi^{(0)} \mathcal{O}\right)\right\rangle = e^{iS[\left.\phi\right|_{u=0}=\phi^{(0)}]},
+\]
+
+where the left-hand side represents a four-dimensional gauge theory (boundary term), and the right-hand side represents a five-dimensional gravitational theory (bulk term).
+
+\vspace{.25cm}
+
+$\phi$\todo{This field value at the boundary represents a source¿?¿?} represents a particular field in the bulk, and $\mathcal{O}$ an operator in the boundary.
+
+\vspace{.25cm}
+
+The AdS boundary is located at $u=0$ following the following metric of the SAdS:
+\[
+    ds_5^2=\left(\frac{r_0}{L}\right)^2 \frac{1}{u^2}(-hdt^2+dx_3^2) + L^2 \frac{du^2}{hu^2}, ~~~~ h = 1-u^4.
+\]
+
+\vspace{.25cm}
+
+In \textbf{the left-hand side} of this equation we interpret the $\langle...\rangle$ as an ensemble average. This term,
+\[
+    \left\langle\exp\left(i\int \phi^{(0)} \mathcal{O}\right)\right\rangle
+\]
+is the generating functional of a four-dimensional field theory when an external source $\phi^{(0)}$\todo{What do we mean by a source?}. The actual computation of this term is difficult in general at strong coupling. However, in AdS/CFT, we evaluate this using the right-hand side of this relation, a graviational theory.
+
+The right-hand side of the relation,
+\[
+    e^{iS[\left.\phi\right|_{u=0}=\phi^{(0)}]},
+\]
+is the generating functional of a five-dimensional gravitational theory.\todo{Generating Functional = Partition Function¿?¿?} We use the saddle-point approximation to approximate the generating functional to the classical solution of the gravitational theory, as it is done to compute black hole thermodynamic quantities, which from the boundary point of view corresponds to the large-$N_c$ limit. In this sense:
+\begin{enumerate}
+    \item $\underline{S}$ represents the on-shell action. That is, the action evaluated at the solution of the equation of motion with the condition $\left.\phi\right|_{u=0}=\phi^{(0)}$
+    \item As the this bulk field satisfies the equation of motion, the on-shell action reduces to a surface term on the AdS boundary. That is, a four-dimensional quantity that we identify as the generating functional of the gauge theory.
+\end{enumerate}
+
+This way, we can loosely say that the gauge theory "lives" on the boundary.
+
+\vspace{.25cm}
+
+From this relation point of view, one could say that AdS/CFT claims that an external source of a field theory can be originated by a five-dimensional object or that: "A bulk field acts as an external source of a boundary operator".
+
+Then, for example the one-point function can be obtained from this relation as:
+\[
+    \langle\mathcal{O}\rangle = \left.\frac{\delta \underline{S}[\phi^{(0)}]}{\delta\phi^{(0)}}\right|_{\phi^{(0)}=0}
+\]
+Or, the one-point functional in the presence of the external source:
+\[
+    \langle\mathcal{O}\rangle = \left.\frac{\delta \underline{S}[\phi^{(0)}]}{\delta\phi^{(0)}}\right|_{\phi^{(0)}=0}
+\]
+\todo{I do not understand what these expressions represent}
+
+\subsection{The form of the Gravitational Theory}
+
+We will use the following form of the action:
+\[
+    S = \frac{1}{16\pi G_5}\int d^5 x \sqrt{-g}(R-2\Lambda) + S_{matter}
+\]\todo{Shouldn't we also consider the Gibbons-Hawking Action?}
+We are going to consider the SAdS black hole so in this case the $S_{matter}=0$. As we want to study out problem in the boundary, we will consider the following asymptotic form of the metric:
+\[
+    ds_5^2\approx \frac{1}{u^2}(-dt^2 + d\mathbf{x}_3^2 + du^2), ~~~ (u\rightarrow 0),
+\]
+where we have set $r_0=L=16\pi G_5 = 1$ for simplicity. 
+
+\vspace{0.25cm}
+
+Our work in the Gravitational theory will go as follows:
+\begin{enumerate}
+    \item Consider a background and add a perturbation
+    \item Once we obtained the classical solution of this perturbation, obtain the on-shell action.
+\end{enumerate}
 
 \end{document}
