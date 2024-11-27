@@ -506,11 +506,11 @@ In $AdS/CFT$ the thermodynamic quantities of the $SAdS_5$ black hole are interpr
     N_c^2 = \frac{\pi L^3}{2G_5} ~~,~~ \lambda = \left(\frac{L}{l_s}\right)^4
 \]
 
-where, $l_s$ is the string lenght, $G_5$ is the newton constant in 5 dimensions, $N_c$ correspond to the dimension of the group of the $U(N_c) gauge theory$, L is the $AdS_5$ radius and $\lambda$ is the Hooft coupling.\todo{I do not fully understand this parameters} So the left hand side of these relations are gauge-theory parameters and the right hand side are gravity parameters. 
+where, $l_s$ is the string lenght, $G_5$ is the newton constant in 5 dimensions, $N_c$ correspond to the dimension of the group of the $U(N_c)$ gauge theory, L is the $AdS_5$ radius and $\lambda$ is the Hooft coupling.\todo{I do not fully understand this parameters} So the left hand side of these relations are gauge-theory parameters and the right hand side are gravity parameters. 
 
 \vspace{.25cm}
 
-First considering what we obtained in the previous chapter the temperature of this blakc hole is given by:
+First considering what we obtained in the previous chapter the temperature of this black hole is given by:
 \[
     T=\frac{r_0}{\pi L^2}
 \]
@@ -536,7 +536,7 @@ The rest of the thermodynamic quantities can be obtained from thermodynamics rel
 
 \vspace{.25cm}
 
-On the other hand, if we think about it from the black hole point of view, it's a surprise that a black hole obeys Stefa-boltzmann law. Indeed, the usual Schwarzschild black hole has a relation $M\propto T^{-2}$, so the black hole takes a completely different form from the Stefan-Boltzmann form. Additionally, it is known that Schwarzschild black hole have negative heat capacity $C=dM/dT<0$, which does not allow for a stable equilibrium. That is: First, the black hole emits radiation and consequently it loses mass, which raises the temperature which incrases the rate at which it emits radiation, and raising the temperature of the black-hole indefinitely, making attaining an equilibrium impossible.
+On the other hand, if we think about it from the black hole point of view, it's a surprise that a black hole obeys Stefan-boltzmann law. Indeed, the usual Schwarzschild black hole has a relation $M\propto T^{-2}$, so the black hole takes a completely different form from the Stefan-Boltzmann form. Additionally, it is known that Schwarzschild black hole have negative heat capacity $C=dM/dT<0$, which does not allow for a stable equilibrium. That is: First, the black hole emits radiation and consequently it loses mass, which raises the temperature which incrases the rate at which it emits radiation, and raising the temperature of the black-hole indefinitely, making attaining an equilibrium impossible.
 
 \vspace{.25cm}
 
@@ -610,7 +610,7 @@ The entropy of a $4+1$-dimensional black hole is interpreted in the $AdS/CFT$ se
 The entropy of the $SAdS_5$ black hole is $3/4$ of the entropy of the free gas limit of the $N=4SYM$ theory, which implies a prediction of the $N=4SYM$ entropy at strong coupling becoming $3/4$ of the free gas entropy.
 
 \subsection{Appendix}
-
+\todo{Everything in this part is done using an Euclidean metric with imaginary time coordinate. I have to revisit the calculations to really understand them}
 To evaluate the semiclassical partition function for the $SAdS_5$ black hole, one needs to obtain first its on-shell action. That is, the action evaluated at the solution of the problem. Todo so, one has to consider the following three terms of the action:
 \[
     S_E = S_{bulk} + S_{GH} + S_{CT}
@@ -625,9 +625,9 @@ which evaluated on-shell gives us:
     S_{bulk} = \frac{\beta V_3}{16\pi G_5}\frac{r_0^4}{L^5}\left.\left(\frac{1}{u^4}-1\right)\right|_{u=0}
 \]
 
-The second term is the Gibbons-hawking action, a surface term that does not contribute to the equation of motion but that is necessary to add, to account for the extrinsic of our space time, that is the curvature only manifest when considering our space-time embedded within a higher-dimensional one. It has the following form:
+The second term is the Gibbons-hawking action, a surface term that does not contribute to the equation of motion but that is necessary to add, to account for the extrinsic curvature of our space time, that is the curvature only manifest when considering our space-time embedded within a higher-dimensional one. It has the following form:
 \[
-    S_{GH} = -\frac{2}{16\pi G_5}\int d^4 x\sqrt{det(g_{ii})}K
+    S_{GH} = -\frac{2}{16\pi G_5}\int d^4 x\sqrt{det(g_{ij})}K
 \]
 and, its value on-shell is given by:
 \[
