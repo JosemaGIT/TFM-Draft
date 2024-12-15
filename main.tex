@@ -733,8 +733,7 @@ Or, the one-point functional in the presence of the external source:
 We will use the following form of the action:
 \[
     S = \frac{1}{16\pi G_5}\int d^5 x \sqrt{-g}(R-2\Lambda) + S_{matter}
-\]\todo{Shouldn't we also consider the Gibbons-Hawking Action?}
-We are going to consider the SAdS black hole so in this case the $S_{matter}=0$. As we want to study out problem in the boundary, we will consider the following asymptotic form of the metric:
+\]We are going to consider the SAdS black hole so in this case the $S_{matter}=0$. As we want to study out problem in the boundary, we will consider the following asymptotic form of the metric:
 \[
     ds_5^2\approx \frac{1}{u^2}(-dt^2 + d\mathbf{x}_3^2 + du^2), ~~~ (u\rightarrow 0),
 \]
@@ -747,5 +746,89 @@ Our work in the Gravitational theory will go as follows:
     \item Consider a background and add a perturbation
     \item Once we obtained the classical solution of this perturbation, obtain the on-shell action.
 \end{enumerate}
+
+We also have to impose two boundary conditions:
+\begin{enumerate}
+    \item Regularity at the boundary: That is, if we consider a "small" perturbation, it must not rise to infinity at the boundary, because this would mean that the perturbation would no longer be "small".
+
+    \item "Incoming-wave" condition: Perturbations are only absorbed by the horizon. This boundary condition is physically natural since nothing comes out from the horizon\todo{Why do we not consider Hawking Radiation in this interpretation?}
+\end{enumerate}
+
+\subsection{Example: Massive Scalar Field}
+
+Let us consider the massive Scalar Field:
+\[
+    S=-\frac{1}{2}\int d^{p+2}\sqrt{-g}\{(\nabla_M\phi)^2+m^2\phi^2\}
+\]
+
+Let's focus on the asymptotic behaviour ($u\rightarrow 0$), where $\sqrt{-g} \sim u^{-(p+2)}, g^{uu} \sim u^2$:
+\[
+    S \sim \int d^{p+1}xdu\left(-\frac{u^2}{2}{\phi'}^2+\frac{m^2}{2}\phi^2\right) u^{-(p+2)}
+\]
+\[
+    =\int d^{p+1}x\int_0^1du\left(-\frac{1}{2u^p}\phi\phi'\right)'+\left(\frac{1}{2u^p}\phi'\right)'\phi+\left(\frac{m^2}{2}\phi^2\right) u^{-(p+2)}
+\]
+\[
+    =\int d^{p+1}x\left.\frac{1}{2u^p}\phi'\right|_{u=0} + \int d^{p+1}xdu\left[\left(\frac{1}{2u^p}\phi'\right)'+u^{-(p+2)}
+        \frac{m^2}{2}\phi\right]\phi
+\]
+The second term is just the equation of motion:
+\[
+    \left(\frac{1}{u^p}\phi'\right)'+u^{-(p+2)}m^2 \phi \sim 0
+\]
+Which leads to two different solutions:
+\[
+    \phi\sim u^{\Delta_{\pm}} ~~~~:~~~~ \Delta_{\pm}=\frac{p+1}{2}\pm\sqrt{\frac{(p+1)^2}{4}+m^2}
+\]
+Which leads to a stable theory as long as:
+\[
+    m^2\geq -\frac{(p+1)^2}{4}
+\]
+If we write its full form as:
+\[
+    \phi\sim\phi^{(0)}\left(u^{\Delta_-}+\phi^{(1)}u^{\Delta_+}\right)
+\]
+If we now want to calculate the one-point functional a "Holographic Renormalization" is needed, using the following counter term action:
+\[
+    S_{CT}=-\frac{\Delta_-}{2}\int d^{p+1}x \sqrt{-g_{ii}}\phi^2
+\]
+Which leaves us with the following on-shell action:
+\[
+    \underline{S}=\underline{S_{bulk}}+\underline{S_{CT}}=\int d^{p+1}x\left.\left(\frac{1}{2u^p}\phi\phi'-\frac{1}{2u^{p+1}}\phi^2\right)\right|_{u=0}=
+\]
+\[
+    = \int d^{p+1}\frac{1}{2}{\phi^{(0)}}^2\phi^{(1)}(\Delta_+-\Delta_-)
+\]
+Which implies that the one point function of the boundary operator is:
+\[
+    \langle O\rangle_s=(\Delta_+-\Delta_-)\phi^{(1)}\phi^{(0)} = (2\Delta_+-(p+1))\phi^{(1)}\phi^{(0)}
+\]
+Which allow us to express the asymptotic solution of this field as:
+\[
+    \phi\sim\phi^{(0)}u^{\Delta_-}+\frac{\langle O\rangle_s}{(2\Delta_+-(p+1))}u^{\Delta_+}
+\]
+
+The $m^2>0$ case leads to a divergence in the $\Delta_-$ which makes this field not suitable to be treated as a perturbation.\todo{If this is the case why are we considering the massive case in the code?}
+
+Under a scale transformation:
+\[
+    x^\mu\rightarrow ax^\mu ~~~~;~~~~ u\rightarrow au
+\]
+which maintain $AdS$ invariant, we'll say that a quantity $\Phi$ has scaling dimension $\alpha$ if it transforms under:
+\[
+    \Phi\rightarrow a^{-\alpha}\Phi
+\]
+
+By this, considering that the bulk field must be invariant under this coordinate transformations we can see that $\phi^{(0)}$ has scaling dimension $\Delta_-$ and $\langle O\rangle_s$ has scaling dimension $\Delta_+$. This way, we can see that as $\Delta_++\Delta_-=p+1$, the resulting perturbation of the boundary action (By the addition of the external source) is indeed scale invariant $\delta S_{QFT}=\int d^{p+1}x\phi^{(0)}O$.
+
+\vspace{.25cm}
+
+\textbf{[During this whole part, we have been working with the "Euclidean Action". I do not fully understand all the implications of this.]}\todo{Ensemble Average <-> Vacuum expectation value}
+
+\newpage
+
+\section{Actual Computation (Recreating the Calculations)}
+
+\textbf{TODO: TRANSCRIPT SOME OF MY HANDWRITTEN NOTES ON THE CALCULATIONS OF THE BULK FIELD}
 
 \end{document}
